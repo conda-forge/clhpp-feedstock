@@ -1,6 +1,6 @@
 {% set name = "clhpp" %}
-{% set version = "2.0.10" %}
-{% set sha256 = "fa27456295c3fa534ce824eb0314190a8b3ebd3ba4d93a0b1270fc65bf378f2b" %}
+{% set version = "2.0.11" %}
+{% set sha256 = "ffc2ca08cf4ae90ee55f14ea3735ccc388f454f4422b69498b2e9b93a1d45181" %}
 
 {% set OSX_VARIANT = os.environ.get("OSX_VARIANT", "native") %}
 
@@ -14,15 +14,15 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
+  number: 0
   script_env:
     - OSX_VARIANT
 
 {% if OSX_VARIANT != "native" %}
-  skip: True  # [not (osx and py36)]
+  skip: true  # [not (osx and py36)]
 {% else %}
-  skip: True  # [unix and not py36]
-  skip: True  # [win and py<36]
+  skip: true  # [unix and not py36]
+  skip: true  # [win and py<36]
 {% endif %}
 
   features:
