@@ -70,7 +70,7 @@ test:
 
 about:
   home: https://github.com/KhronosGroup/OpenCL-CLHPP
-  license: MIT-like
+  license: Apache-2.0
   license_file: LICENSE.txt
   summary: OpenCL Host API C++ bindings
 
