@@ -1,6 +1,6 @@
 {% set name = "clhpp" %}
-{% set version = "2.0.10" %}
-{% set sha256 = "fa27456295c3fa534ce824eb0314190a8b3ebd3ba4d93a0b1270fc65bf378f2b" %}
+{% set version = "2.0.12" %}
+{% set sha256 = "20b28709ce74d3602f1a946d78a2024c1f6b0ef51358b9686612669897a58719" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1002
+  number: 0
   always_include_files:
     - include/CL/cl.hpp
     - include/CL/cl2.hpp
