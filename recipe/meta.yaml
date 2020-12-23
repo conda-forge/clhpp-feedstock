@@ -14,8 +14,8 @@ source:
 build:
   number: 0
   always_include_files:
-    - include/CL/cl.hpp
     - include/CL/cl2.hpp
+    - include/CL/opencl.hpp
 
 requirements:
   build:
@@ -32,12 +32,12 @@ requirements:
 
 test:
   commands:
-    - test -d "${PREFIX}/include/CL"                    # [unix]
-    - test -f "${PREFIX}/include/CL/cl.hpp"             # [unix]
-    - test -f "${PREFIX}/include/CL/cl2.hpp"            # [unix]
-    - if not exist %LIBRARY_INC%\\CL exit 1             # [win]
-    - if not exist %LIBRARY_INC%\\CL\\cl.hpp exit 1     # [win]
-    - if not exist %LIBRARY_INC%\\CL\\cl2.hpp exit 1    # [win]
+    - test -d "${PREFIX}/include/CL"                     # [unix]
+    - test -f "${PREFIX}/include/CL/cl2.hpp"             # [unix]
+    - test -f "${PREFIX}/include/CL/opencl.hpp"          # [unix]
+    - if not exist %LIBRARY_INC%\\CL exit 1              # [win]
+    - if not exist %LIBRARY_INC%\\CL\\cl2.hpp exit 1     # [win]
+    - if not exist %LIBRARY_INC%\\CL\\opencl.hpp exit 1  # [win]
 
 about:
   home: https://github.com/KhronosGroup/OpenCL-CLHPP
