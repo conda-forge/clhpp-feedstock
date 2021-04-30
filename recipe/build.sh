@@ -12,7 +12,7 @@ then
     OPENCL_DIST_DIR_FLAG="";
 fi
 
-cmake \
+cmake ${CMAKE_ARGS} \
     -G "Unix Makefiles" \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_PREFIX_PATH="${PREFIX}" \
