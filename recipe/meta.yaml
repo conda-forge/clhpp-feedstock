@@ -24,6 +24,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - python >=3.5
+    - ruby >=3
   host:
     - ocl-icd                    # [linux]
     - khronos-opencl-icd-loader  # [win or osx]
