@@ -11,6 +11,7 @@ cmake ${CMAKE_ARGS} \
     -DBUILD_DOCS=0 \
     -DBUILD_EXAMPLES=0 \
     -DBUILD_TESTING=0 \
+    -DOPENCL_CLHPP_HEADERS_DIR="${PREFIX}/include" \
     -DOPENCL_DIST_DIR="${PREFIX}" \
     "${SRC_DIR}"
 
