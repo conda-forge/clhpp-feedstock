@@ -1,6 +1,6 @@
 {% set name = "clhpp" %}
-{% set version = "2.0.16" %}
-{% set sha256 = "869456032e60787eed9fceaeaf6c6cb4452bc0ff97e0f5a271510145a1c8f4d4" %}
+{% set version = "2022.05.18" %}
+{% set sha256 = "d29affd740c5037b4499790613f5af0718ffc88c325e793b73cb35b7592fc0f7" %}
 
 package:
   name: {{ name|lower }}
