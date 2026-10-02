@@ -1,4 +1,4 @@
-{% set version = "2023.02.06" %}
+{% set version = "2026.05.29" %}
 
 package:
   name: clhpp
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/KhronosGroup/OpenCL-CLHPP/archive/v{{ version }}.tar.gz
-  sha256: 2726106df611fb5cb65503a52df27988d80c0b8844c8f0901c6092ab43701e8c
+  sha256: fafb4fd202d113992c009d46e6358e70076167e62a5baeb377fe813033a2655e
 
 build:
   number: 0
