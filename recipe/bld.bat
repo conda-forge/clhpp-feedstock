@@ -8,8 +8,7 @@ cmake ^
     -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ^
     -DBUILD_DOCS=OFF ^
     -DBUILD_EXAMPLES=OFF ^
-    -DBUILD_TESTS=OFF ^
-    -DOPENCL_DIST_DIR="%LIBRARY_PREFIX%" ^
+    -DBUILD_TESTING=OFF ^
     "%SRC_DIR%"
 nmake
 nmake install
