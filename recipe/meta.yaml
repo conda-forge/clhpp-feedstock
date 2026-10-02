@@ -10,6 +10,8 @@ source:
 
 build:
   number: 0
+  script_env:
+    - CMAKE_POLICY_VERSION_MINIMUM=3.5
 
 requirements:
   build:
