@@ -1,35 +1,26 @@
-{% set name = "clhpp" %}
 {% set version = "2023.02.06" %}
-{% set sha256 = "2726106df611fb5cb65503a52df27988d80c0b8844c8f0901c6092ab43701e8c" %}
 
 package:
-  name: {{ name|lower }}
+  name: clhpp
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/KhronosGroup/OpenCL-CLHPP/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 2726106df611fb5cb65503a52df27988d80c0b8844c8f0901c6092ab43701e8c
 
 build:
   number: 0
-  always_include_files:
-    - include/CL/opencl.hpp
-    - include/CL/cl2.hpp
 
 requirements:
   build:
     - cmake
     - make   # [unix]
     - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
     - python >=3.5
   host:
-    - ocl-icd                    # [linux]
-    - khronos-opencl-icd-loader  # [win or osx]
-  run:
-    - khronos-opencl-icd-loader  # [win]
-    - ocl-icd                    # [linux]
+    - libopencl-devel
 
 test:
   commands:
@@ -45,7 +36,6 @@ about:
   license: Apache-2.0
   license_file: LICENSE.txt
   summary: OpenCL Host API C++ bindings
-
   dev_url: https://github.com/KhronosGroup/OpenCL-CLHPP
   doc_url: http://github.khronos.org/OpenCL-CLHPP
 
