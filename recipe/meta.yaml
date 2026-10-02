@@ -20,8 +20,6 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
-    - python >=3.5
-    - ruby >=4
   host:
     - libopencl-devel
 
