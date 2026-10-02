@@ -10,8 +10,7 @@ cmake ${CMAKE_ARGS} \
     -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
     -DBUILD_DOCS=0 \
     -DBUILD_EXAMPLES=0 \
-    -DBUILD_TESTS=0 \
-    -DOPENCL_DIST_DIR="${PREFIX}" \
+    -DBUILD_TESTING=OFF \
     "${SRC_DIR}"
 
 make -j${CPU_COUNT}
