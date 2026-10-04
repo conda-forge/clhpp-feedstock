@@ -6,6 +6,9 @@ provider:
   linux_aarch64: default
   linux_ppc64le: default
   osx_arm64: default
+noarch_platforms:
+- linux_64
+- win_64
 conda_build:
   pkg_format: '2'
 test: native_and_emulated

@@ -10,6 +10,7 @@ source:
 
 build:
   number: 0
+  noarch: generic
 
 requirements:
   build:
@@ -20,6 +21,9 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - libopencl-devel
+  run:
+    - __unix   # [unix]
+    - __win    # [win]
 
 test:
   commands:
