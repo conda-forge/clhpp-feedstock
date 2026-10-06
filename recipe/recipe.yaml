@@ -1,0 +1,55 @@
+context:
+  version: "2026.05.29"
+
+package:
+  name: clhpp
+  version: ${{ version }}
+
+source:
+  url: https://github.com/KhronosGroup/OpenCL-CLHPP/archive/v${{ version }}.tar.gz
+  sha256: fafb4fd202d113992c009d46e6358e70076167e62a5baeb377fe813033a2655e
+
+build:
+  number: 0
+  noarch: generic
+
+requirements:
+  build:
+    - cmake
+    - if: unix
+      then: make
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - ${{ compiler('cxx') }}
+  host:
+    - libopencl-devel
+  run:
+    - if: unix
+      then: __unix
+    - if: win
+      then: __win
+
+tests:
+  - package_contents:
+      files:
+        - if: win
+          then:
+            - Library/include/CL/opencl.hpp
+            - Library/include/CL/cl2.hpp
+          else:
+            - include/CL/opencl.hpp
+            - include/CL/cl2.hpp
+
+about:
+  homepage: https://github.com/KhronosGroup/OpenCL-CLHPP
+  license: Apache-2.0
+  license_file: LICENSE.txt
+  summary: OpenCL Host API C++ bindings
+  repository: https://github.com/KhronosGroup/OpenCL-CLHPP
+  documentation: http://github.khronos.org/OpenCL-CLHPP
+
+extra:
+  recipe-maintainers:
+    - inducer
+    - isuruf
+    - jakirkham
