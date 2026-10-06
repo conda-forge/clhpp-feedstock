@@ -31,14 +31,15 @@ requirements:
 
 tests:
   - package_contents:
-      include:
+      files:
         - if: win
           then:
-            - Library/CL/opencl.hpp
-            - Library/CL/cl2.hpp
+            - Library/include/CL/opencl.hpp
+            - Library/include/CL/cl2.hpp
           else:
-            - CL/opencl.hpp
-            - CL/cl2.hpp
+            - include/CL/opencl.hpp
+            - include/CL/cl2.hpp
+
 about:
   homepage: https://github.com/KhronosGroup/OpenCL-CLHPP
   license: Apache-2.0
